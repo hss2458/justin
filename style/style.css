@@ -1,0 +1,142 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  height: 5000px; }
+
+.container {
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 0 15px; }
+
+.line-effect {
+  position: relative; }
+  .line-effect::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), #a5a5a5, rgba(0, 0, 0, 0));
+    background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#000000', GradientType=1); }
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  opacity: 0;
+  z-index: -10;
+  transition: 0.6s; }
+  .header.show-header {
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 0.6s; }
+  .header .container {
+    height: 76px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .header .logo {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #333;
+    font-weight: 600; }
+  .header nav {
+    display: flex; }
+    .header nav .nav-link {
+      display: flex;
+      /* a링크에 혹시 몰라 블록개념 주기 */
+      text-transform: uppercase;
+      padding: 20px;
+      color: #333; }
+      .header nav .nav-link:hover {
+        color: #ff5252; }
+
+.main .visual {
+  background: url("../images/main.jpg") 50% 50%/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .main .visual::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.3); }
+  .main .visual .text {
+    position: relative;
+    /* text가 &::after 밑에 깔려서 position 적용 */
+    text-align: center; }
+    .main .visual .text p {
+      font-size: 20px;
+      color: #fff; }
+    .main .visual .text h1 {
+      font-size: 61px;
+      color: #fff;
+      font-weight: 300;
+      margin-top: 15px;
+      padding-bottom: 40px; }
+.main .bio {
+  position: relative;
+  margin-top: -200px;
+  opacity: 0;
+  transform: translateY(120px);
+  transition: 1s; }
+  .main .bio.show-bio {
+    opacity: 1;
+    transform: none; }
+  .main .bio .container .bio-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 950px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 10px;
+    padding: 50px;
+    box-shadow: 1px 2px 20px rgba(0, 0, 0, 0.15); }
+    .main .bio .container .bio-content .photo {
+      flex: 5;
+      text-align: center;
+      /* 인라인요소는 부모에 ta:c를 주면 가운데로 온다. */ }
+      .main .bio .container .bio-content .photo img {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        object-fit: cover; }
+    .main .bio .container .bio-content .text {
+      flex: 6; }
+      .main .bio .container .bio-content .text h2 {
+        font-size: 32px;
+        font-weight: 500;
+        margin-bottom: 30px; }
+      .main .bio .container .bio-content .text p {
+        color: #6e7373;
+        line-height: 1.5;
+        font-size: 20px;
+        max-width: 420px;
+        margin-bottom: 25px; }
+      .main .bio .container .bio-content .text .sns-links {
+        display: flex; }
+        .main .bio .container .bio-content .text .sns-links a {
+          margin-right: 20px; }
+          .main .bio .container .bio-content .text .sns-links a i {
+            font-size: 22px;
+            color: #555; }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,181 @@
+@import "reset";
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  height: 5000px;
+}
+
+.container {
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.line-effect {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgb(165, 165, 165), rgba(0, 0, 0, 0));
+    background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#000000', GradientType=1);
+  }
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  opacity: 0;
+  z-index: -10;
+  transition: 0.6s;
+
+  &.show-header {
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 0.6s;
+  }
+
+
+  .container {
+    height: 76px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #333;
+    font-weight: 600;
+  }
+
+  nav {
+    display: flex;
+
+    .nav-link {
+      display: flex; /* a링크에 혹시 몰라 블록개념 주기 */
+      text-transform: uppercase;
+      padding: 20px;
+      color: #333;
+
+      &:hover {
+        color: #ff5252;
+      }
+    }
+  }
+}
+
+.main {
+  .visual {
+    background: url("../images/main.jpg") 50% 50% / cover no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.3);
+    }
+
+    .text {
+      position: relative; /* text가 &::after 밑에 깔려서 position 적용 */
+      text-align: center;
+
+      p {
+        font-size: 20px;
+        color: #fff;
+      }
+
+      h1 {
+        font-size: 61px;
+        color: #fff;
+        font-weight: 300;
+        margin-top: 15px;
+        padding-bottom: 40px;
+      }
+    }
+  }
+
+  .bio {
+    position: relative;
+    margin-top: -200px;
+    opacity: 0;
+    transform: translateY(120px);
+    transition: 1s;
+
+    &.show-bio {
+      opacity: 1;
+      transform: none;
+    }
+
+    .container {
+      .bio-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 950px;
+        margin: 0 auto;
+        background: #fff;
+        border-radius: 10px;
+        padding: 50px;
+        box-shadow: 1px 2px 20px rgba(0, 0, 0, 0.15);
+
+        .photo {
+          flex: 5;
+          text-align: center; /* 인라인요소는 부모에 ta:c를 주면 가운데로 온다. */
+          img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+        }
+
+        .text {
+          flex: 6;
+
+          h2 {
+            font-size: 32px;
+            font-weight: 500;
+            margin-bottom: 30px;
+          }
+          p {
+            color: #6e7373;
+            line-height: 1.5;
+            font-size: 20px;
+            max-width: 420px;
+            margin-bottom: 25px;
+          }
+
+          .sns-links {
+            display: flex;
+            a {
+              margin-right: 20px;
+              i {
+                font-size: 22px;
+                color: #555;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
