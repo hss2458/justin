@@ -15,6 +15,9 @@ body {
   margin: 0 auto;
   padding: 0 15px; }
 
+.section {
+  padding: 100px 0 80px; }
+
 .title-txt {
   width: 230px;
   margin: auto;
@@ -27,7 +30,8 @@ body {
   .title-txt h2 {
     padding: 0 0 30px;
     font-size: 30px;
-    letter-spacing: 3px; }
+    letter-spacing: 3px;
+    margin-bottom: 50px; }
 
 .line-effect {
   position: relative; }
@@ -155,46 +159,45 @@ body {
             font-size: 22px;
             color: #555; }
 
-.services {
-  padding: 100px 0 80px; }
-  .services .service-content .skill-list {
-    padding: 35px 0 0;
-    display: flex;
-    flex-wrap: wrap; }
-    .services .service-content .skill-list .box {
-      position: relative;
-      margin: 15px;
-      width: 30%;
-      height: 240px;
-      background: url("../images/services1.jpg") 50% 50%/cover no-repeat; }
-      .services .service-content .skill-list .box:nth-child(2) {
-        background: url("../images/services2.jpg") 50% 50%/cover no-repeat; }
-      .services .service-content .skill-list .box:nth-child(3) {
-        background: url("../images/services3.jpg") 50% 50%/cover no-repeat; }
-      .services .service-content .skill-list .box:nth-child(4) {
-        background: url("../images/services4.jpg") 50% 50%/cover no-repeat; }
-      .services .service-content .skill-list .box:nth-child(5) {
-        background: url("../images/services5.jpg") 50% 50%/cover no-repeat; }
-      .services .service-content .skill-list .box:nth-child(6) {
-        background: url("../images/services6.jpg") 50% 50%/cover no-repeat; }
-      .services .service-content .skill-list .box::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background: rgba(0, 0, 0, 0.3); }
-      .services .service-content .skill-list .box .box-label {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        padding: 11px 20px;
-        border-radius: 3px;
-        background: #fff; }
-        .services .service-content .skill-list .box .box-label p {
-          font-size: 14px; }
+.services .service-content .skill-list {
+  padding: 30px 0 0;
+  display: flex;
+  flex-wrap: wrap; }
+  .services .service-content .skill-list .box {
+    position: relative;
+    margin: 15px;
+    width: 30%;
+    height: 240px;
+    background: url("../images/services1.jpg") 50% 50%/cover no-repeat; }
+    .services .service-content .skill-list .box:nth-child(2) {
+      background: url("../images/services2.jpg") 50% 50%/cover no-repeat; }
+    .services .service-content .skill-list .box:nth-child(3) {
+      background: url("../images/services3.jpg") 50% 50%/cover no-repeat; }
+    .services .service-content .skill-list .box:nth-child(4) {
+      background: url("../images/services4.jpg") 50% 50%/cover no-repeat; }
+    .services .service-content .skill-list .box:nth-child(5) {
+      background: url("../images/services5.jpg") 50% 50%/cover no-repeat; }
+    .services .service-content .skill-list .box:nth-child(6) {
+      background: url("../images/services6.jpg") 50% 50%/cover no-repeat; }
+    .services .service-content .skill-list .box::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.3); }
+    .services .service-content .skill-list .box .box-label {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 10px 20px;
+      border-radius: 3px;
+      background: #fff; }
+      .services .service-content .skill-list .box .box-label p {
+        font-size: 14px;
+        color: #595959; }
 
 .resume {
   padding: 100px 0;
@@ -204,7 +207,7 @@ body {
   .resume .expertise .list-box {
     display: flex;
     flex-wrap: wrap;
-    padding: 50px 0 0; }
+    padding: 20px 0 0; }
     .resume .expertise .list-box .top-box {
       width: 47%;
       margin: 0 15px; }
@@ -259,5 +262,59 @@ body {
             color: #fff;
             font-size: 12px;
             padding: 3px 7px; }
+
+.work .flip {
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap; }
+  .work .flip img {
+    width: 400px;
+    height: 532px; }
+
+.testimony {
+  position: relative;
+  background: #f7f7f7; }
+  .testimony .container .box .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    text-align: center;
+    max-width: 700px;
+    width: 85%;
+    height: 280px;
+    margin: 0 auto;
+    background: #fff;
+    border: 1px solid #eee; }
+    .testimony .container .box .content img {
+      width: 100px;
+      height: 100px;
+      border-radius: 30px;
+      object-fit: cover; }
+    .testimony .container .box .content p {
+      margin: 24px 0 0;
+      padding: 8px 0 0;
+      font-size: 16px;
+      line-height: 34px;
+      color: #6f7474; }
+    .testimony .container .box .content span {
+      margin: 16px 0 0;
+      font-size: 14px;
+      font-weight: 500; }
+  .testimony .container .slide-btn {
+    display: flex;
+    justify-content: space-between; }
+    .testimony .container .slide-btn a span {
+      font-size: 50px;
+      color: #3394fd; }
+    .testimony .container .slide-btn a:nth-child(1) {
+      position: absolute;
+      top: 59%;
+      left: 20%; }
+    .testimony .container .slide-btn a:nth-child(2) {
+      position: absolute;
+      top: 59%;
+      right: 20%; }
 
 /*# sourceMappingURL=style.css.map */
