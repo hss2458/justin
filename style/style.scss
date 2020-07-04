@@ -11,6 +11,25 @@ body {
   padding: 0 15px;
 }
 
+.title-txt {
+  width: 230px;
+  margin: auto;
+  text-align: center;
+  text-transform: uppercase;
+  color: #333333;
+
+  p {
+    padding-bottom: 10px;
+    color: #8e9494;
+  }
+
+  h2 {
+    padding: 0 0 30px;
+    font-size: 30px;
+    letter-spacing: 3px;
+  }
+}
+
 .line-effect {
   position: relative;
 
@@ -72,6 +91,7 @@ body {
       &:hover {
         color: #ff5252;
       }
+
     }
   }
 }
@@ -156,6 +176,7 @@ body {
             font-weight: 500;
             margin-bottom: 30px;
           }
+
           p {
             color: #6e7373;
             line-height: 1.5;
@@ -166,11 +187,184 @@ body {
 
           .sns-links {
             display: flex;
+
             a {
               margin-right: 20px;
+
+              &:hover {
+                i {
+                  color: #ff5252;
+                }
+              }
+
               i {
                 font-size: 22px;
                 color: #555;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.services {
+  padding: 100px 0 80px;
+
+  .service-content {
+
+    .skill-list {
+      padding: 35px 0 0;
+      display: flex;
+      flex-wrap: wrap;
+
+      .box {
+        position: relative;
+        margin: 15px;
+        width: 30%;
+        height: 240px;
+        background: url("../images/services1.jpg") 50% 50% / cover no-repeat;
+
+        &:nth-child(2) {
+          background: url("../images/services2.jpg") 50% 50% / cover no-repeat;
+        }
+
+        &:nth-child(3) {
+          background: url("../images/services3.jpg") 50% 50% / cover no-repeat;
+        }
+
+        &:nth-child(4) {
+          background: url("../images/services4.jpg") 50% 50% / cover no-repeat;
+        }
+
+        &:nth-child(5) {
+          background: url("../images/services5.jpg") 50% 50% / cover no-repeat;
+        }
+
+        &:nth-child(6) {
+          background: url("../images/services6.jpg") 50% 50% / cover no-repeat;
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background: rgba(0, 0, 0, 0.3);
+        }
+
+        .box-label {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          padding: 11px 20px;
+          border-radius: 3px;
+          background: #fff;
+
+          p {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.resume {
+  padding: 100px 0;
+  background: #f7f7f7;
+
+
+  .expertise {
+    .title-txt {
+      width: 400px;
+    }
+
+    .list-box {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 50px 0 0;
+
+      .top-box {
+        width: 47%;
+        margin: 0 15px;
+
+        h3 {
+          padding: 20px 0 0;
+          font-size: 20px;
+          text-transform: capitalize;
+        }
+
+        .content {
+          .box {
+            margin-top: 24px;
+            padding: 24px;
+            background: #fff;
+            border: 1px solid #eee;
+
+            h5 {
+              font-size: 18px;
+              font-weight: 500;
+            }
+
+            h6 {
+              display: inline-block;
+              padding: 1px 4px;
+              margin: 14px 0;
+              font-size: 12px;
+              color: #fff;
+              background: #fd735a;
+              border-radius: 6px;
+            }
+
+            p {
+              color: #868a8a;
+            }
+          }
+
+          .list {
+            p {
+              font-size: 14px;
+              padding: 0 15px;
+              text-transform: capitalize;
+            }
+
+            .progress {
+              height: 8px;
+              width: 95%;
+              background: #eee;
+              margin: 15px;
+              border-radius: 4px;
+
+              &:hover {
+                .gauge {
+                  width: 80%;
+                  overflow: visible;
+                }
+              }
+
+              .gauge {
+                position: relative;
+                height: 8px;
+                width: 0;
+                background: #ff5252;
+                border-radius: 4px;
+                transition: 0.3s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+                overflow: hidden;
+
+                .label {
+                  position: absolute;
+                  right: 0;
+                  bottom: calc(100% + 5px);
+                  background: #ff5252;
+                  color: #fff;
+                  font-size: 12px;
+                  padding: 3px 7px;
+                }
               }
             }
           }

@@ -15,6 +15,20 @@ body {
   margin: 0 auto;
   padding: 0 15px; }
 
+.title-txt {
+  width: 230px;
+  margin: auto;
+  text-align: center;
+  text-transform: uppercase;
+  color: #333333; }
+  .title-txt p {
+    padding-bottom: 10px;
+    color: #8e9494; }
+  .title-txt h2 {
+    padding: 0 0 30px;
+    font-size: 30px;
+    letter-spacing: 3px; }
+
 .line-effect {
   position: relative; }
   .line-effect::after {
@@ -135,8 +149,115 @@ body {
         display: flex; }
         .main .bio .container .bio-content .text .sns-links a {
           margin-right: 20px; }
+          .main .bio .container .bio-content .text .sns-links a:hover i {
+            color: #ff5252; }
           .main .bio .container .bio-content .text .sns-links a i {
             font-size: 22px;
             color: #555; }
+
+.services {
+  padding: 100px 0 80px; }
+  .services .service-content .skill-list {
+    padding: 35px 0 0;
+    display: flex;
+    flex-wrap: wrap; }
+    .services .service-content .skill-list .box {
+      position: relative;
+      margin: 15px;
+      width: 30%;
+      height: 240px;
+      background: url("../images/services1.jpg") 50% 50%/cover no-repeat; }
+      .services .service-content .skill-list .box:nth-child(2) {
+        background: url("../images/services2.jpg") 50% 50%/cover no-repeat; }
+      .services .service-content .skill-list .box:nth-child(3) {
+        background: url("../images/services3.jpg") 50% 50%/cover no-repeat; }
+      .services .service-content .skill-list .box:nth-child(4) {
+        background: url("../images/services4.jpg") 50% 50%/cover no-repeat; }
+      .services .service-content .skill-list .box:nth-child(5) {
+        background: url("../images/services5.jpg") 50% 50%/cover no-repeat; }
+      .services .service-content .skill-list .box:nth-child(6) {
+        background: url("../images/services6.jpg") 50% 50%/cover no-repeat; }
+      .services .service-content .skill-list .box::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.3); }
+      .services .service-content .skill-list .box .box-label {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 11px 20px;
+        border-radius: 3px;
+        background: #fff; }
+        .services .service-content .skill-list .box .box-label p {
+          font-size: 14px; }
+
+.resume {
+  padding: 100px 0;
+  background: #f7f7f7; }
+  .resume .expertise .title-txt {
+    width: 400px; }
+  .resume .expertise .list-box {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px 0 0; }
+    .resume .expertise .list-box .top-box {
+      width: 47%;
+      margin: 0 15px; }
+      .resume .expertise .list-box .top-box h3 {
+        padding: 20px 0 0;
+        font-size: 20px;
+        text-transform: capitalize; }
+      .resume .expertise .list-box .top-box .content .box {
+        margin-top: 24px;
+        padding: 24px;
+        background: #fff;
+        border: 1px solid #eee; }
+        .resume .expertise .list-box .top-box .content .box h5 {
+          font-size: 18px;
+          font-weight: 500; }
+        .resume .expertise .list-box .top-box .content .box h6 {
+          display: inline-block;
+          padding: 1px 4px;
+          margin: 14px 0;
+          font-size: 12px;
+          color: #fff;
+          background: #fd735a;
+          border-radius: 6px; }
+        .resume .expertise .list-box .top-box .content .box p {
+          color: #868a8a; }
+      .resume .expertise .list-box .top-box .content .list p {
+        font-size: 14px;
+        padding: 0 15px;
+        text-transform: capitalize; }
+      .resume .expertise .list-box .top-box .content .list .progress {
+        height: 8px;
+        width: 95%;
+        background: #eee;
+        margin: 15px;
+        border-radius: 4px; }
+        .resume .expertise .list-box .top-box .content .list .progress:hover .gauge {
+          width: 80%;
+          overflow: visible; }
+        .resume .expertise .list-box .top-box .content .list .progress .gauge {
+          position: relative;
+          height: 8px;
+          width: 0;
+          background: #ff5252;
+          border-radius: 4px;
+          transition: 0.3s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+          overflow: hidden; }
+          .resume .expertise .list-box .top-box .content .list .progress .gauge .label {
+            position: absolute;
+            right: 0;
+            bottom: calc(100% + 5px);
+            background: #ff5252;
+            color: #fff;
+            font-size: 12px;
+            padding: 3px 7px; }
 
 /*# sourceMappingURL=style.css.map */
